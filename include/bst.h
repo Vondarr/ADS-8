@@ -104,6 +104,10 @@ class BST {
     return result->count;
   }
 
+  void collectInfo(std::vector<std::pair<T, int>>& items) const {
+    traverse(root, items);
+  }
+
   std::vector<std::pair<T, int>> getAllElements() const {
     std::vector<std::pair<T, int>> result;
     traverse(root, result);
