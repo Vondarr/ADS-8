@@ -1,9 +1,13 @@
 // Copyright 2021 NNTU-CS
-#include  <iostream>
-#include  <fstream>
-#include  <locale>
-#include  <cstdlib>
-#include  "bst.h"
+#include <algorithm>
+#include <cctype>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include "bst.h"
 
 namespace {
 
@@ -18,7 +22,7 @@ char toLowercase(char ch) {
   return ch;
 }
 
-}
+}  // namespace
 
 void makeTree(BST<std::string>& tree, const char* source) {
   std::ifstream input(source);
